@@ -30,7 +30,7 @@ function Register() {
     }
 
     try {
-      const { data } = await axios.post("http://localhost:8000/api/users/register", {
+      const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL || "http://localhost:8000"}/api/users/register`, {
         name,
         email,
         password,

@@ -29,7 +29,7 @@ function Login() {
     }
 
     try {
-      const { data } = await axios.post("http://localhost:8000/api/users/login", {
+      const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL || "http://localhost:8000"}/api/users/login`, {
         email,
         password,
       });

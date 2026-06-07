@@ -3,7 +3,7 @@ import axios from "axios";
 import { io } from "socket.io-client";
 import Editor from "@monaco-editor/react";
 
-const ENDPOINT = "http://127.0.0.1:8000"; 
+const ENDPOINT = import.meta.env.VITE_BACKEND_URL || "http://127.0.0.1:8000"; 
 let socket;
 
 const codeTemplates = {
